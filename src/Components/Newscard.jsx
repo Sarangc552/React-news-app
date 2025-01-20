@@ -16,11 +16,11 @@ const Newscard = ({ data }) => {
             <Card style={{ width: "18rem" }} className="cardcontainer">
               <Card.Img
                 variant="top"
-                src={test.urlToImage || "https://via.placeholder.com/150"}
+                src={test.urlToImage}
                 alt={test.title}
               />
               <Card.Body>
-                <Card.Title>{test.title}</Card.Title>
+                <Card.Title style={{cursor:"pointer"}} onClick={()=>readmore(test.url)}>{test.title}</Card.Title>
                 <Card.Text>
                   {test.description || "Description not available."}
                 </Card.Text>
